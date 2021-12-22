@@ -36,7 +36,10 @@ int main(){
         }
     }
 
-    cout << "The champion is " << champ << " with the score of " << mx << " !" << endl;
+    if(mx != 0)
+        cout << "The champion is " << champ << " with the score of " << mx << " !" << endl;
+    else
+        cout << "Everyone sucks" << endl;
 
     return 0;
 }
