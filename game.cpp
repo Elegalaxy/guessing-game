@@ -1,6 +1,5 @@
 #include <iostream>
 #include "game.h"
-#include "player.h"
 
 void gameplay(vector<player*>&players , int random){
     int chance = 7;
