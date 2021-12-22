@@ -1,7 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
+#include <vector>
 using namespace std;
 
-bool gameplay(int random);
+bool gameplay(vector<player*> players , int random);
 
 #endif

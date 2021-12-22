@@ -1,6 +1,5 @@
 #include <iostream>
 #include "player.h"
-using namespace std;
 
 player::player(string n , int s)
 {

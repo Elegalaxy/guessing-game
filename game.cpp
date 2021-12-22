@@ -1,14 +1,18 @@
 #include <iostream>
-using namespace std;
+#include "game.h"
+#include "player.h"
 
-bool gameplay(int random){
+void gameplay(vector<player*>&players , int random){
     int chance = 7;
     int input;
     int minimum = 1;
     int maximum = 100;
+    int current_player = 0;
     while (chance > 0){
-        cout << "Enter Number betweeen " << minimum << " - " << maximum << ": ";
+        cout << players[current_player]->name << " enter Number betweeen " << minimum << " - " << maximum << ": ";
         cin >> input;
+
+        //Gameplay
         if (input > random){
             cout << input << " is bigger than answer." << endl;
             maximum = input - 1;
@@ -18,9 +22,17 @@ bool gameplay(int random){
             minimum = input + 1;
         }
         else {
-            return true;
+            players[current_player]->score ++;
+            return;
+        }
+
+        //Player Choice
+        if (current_player == players.size() - 1){
+            current_player = 0;
+        }
+        else{
+            current_player ++;
         }
         chance --;
     }
-    return false;
 }
