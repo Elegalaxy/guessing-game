@@ -39,7 +39,7 @@ int main(){
     if(mx != 0)
         cout << "The champion is " << champ << " with the score of " << mx << " !" << endl;
     else
-        cout << "Everyone sucks" << endl;
+        cout << "Everyone sucks, answer is: " << ans << endl;
 
     return 0;
 }
