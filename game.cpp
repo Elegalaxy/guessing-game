@@ -2,7 +2,7 @@
 using namespace std;
 
 bool gameplay(int random){
-    int chance = 6;
+    int chance = 7;
     int input;
     int minimum = 1;
     int maximum = 100;
