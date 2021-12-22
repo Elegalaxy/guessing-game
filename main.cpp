@@ -26,12 +26,17 @@ int main(){
         players.push_back(temp);
     }
 
+    gameplay(players, ans);
+    string champ = "";
+    int mx = 0;
+    for(player* i:players){
+        if(i->score > mx){
+            mx = i->score;
+            champ = i->name;
+        }
+    }
 
-
-    if(gameplay(ans))
-        cout << "You Win!" << endl;
-    else
-        cout << "You Loss! The answer is: " << ans << endl;
+    cout << "The champion is " << champ << " with the score of " << mx << " !" << endl;
 
     return 0;
 }
