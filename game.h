@@ -2,6 +2,6 @@
 #define GAME_H
 using namespace std;
 
-bool gameplay();
+bool gameplay(int random);
 
 #endif
