@@ -4,6 +4,6 @@
 #include "player.h"
 using namespace std;
 
-void gameplay(vector<player*>&players , int random);
+void gameplay(vector<player*>&players , int random , int chance);
 
 #endif

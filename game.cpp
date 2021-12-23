@@ -1,8 +1,7 @@
 #include <iostream>
 #include "game.h"
 
-void gameplay(vector<player*>&players , int random){
-    int chance = 7;
+void gameplay(vector<player*>&players , int random ,int chance){
     int input;
     int minimum = 1;
     int maximum = 100;

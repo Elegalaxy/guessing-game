@@ -2,6 +2,7 @@
 #include <vector>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h> 
 #include "game.h"
 #include "player.h"
 using namespace std;
@@ -11,7 +12,7 @@ int main(){
     int ans = rand()%100+1;
 
     cout << "Welcome to guess the number." << endl;
-    cout << "Guess the number between 1 to 100 and you have 7 chances" << endl;
+    
 
     vector<player*> players;
     int num;
@@ -26,7 +27,10 @@ int main(){
         players.push_back(temp);
     }
 
-    gameplay(players, ans);
+    int chance = ceil(7.0/(float)num)*num;
+
+   cout << endl <<"Guess the number between 1 to 100 and you have total of "<< chance << " chances" << endl;
+    gameplay(players, ans , chance);
     string champ = "";
     int mx = 0;
     for(player* i:players){
