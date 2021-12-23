@@ -4,11 +4,32 @@
 #include <time.h>
 #include <math.h> 
 #include "game.h"
-#include "player.h"
+#include "ai.h"
 using namespace std;
 
 pair <vector<player*>,int >singleplayer(){
-    
+    int ans = rand()%100+1;
+
+    vector<ai*> ais;
+    int num;
+    cout << "How many ai are there? ";
+    cin >> num;
+
+    cout << "Your name: ";
+    string n;
+    cin >> n;
+
+    for(int i = 0; i < num; i++){
+        ai* temp = new ai("AI "+to_string(i+1), 0);
+        ais.push_back(temp);
+    }
+
+    int chance = ceil(7.0/(float)num)*num;
+
+    cout << endl <<"Guess the number between 1 to 100 and you have total of "<< chance << " chances" << endl;
+    gameplay(n, ais, ans , chance);
+    return {ais,ans};
+
 }
 
 pair <vector<player*>,int >multiplayer(){
@@ -33,7 +54,6 @@ pair <vector<player*>,int >multiplayer(){
     gameplay(players, ans , chance);
     return {players,ans};
 }
-
 
 
 int main(){
