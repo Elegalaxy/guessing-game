@@ -19,7 +19,7 @@ main:
 
 UI: ZK
 
-Multiplayer(n)
-AI
+Multiplayer(n) done
+AI 
 
 Championship
