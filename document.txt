@@ -23,8 +23,3 @@ Multiplayer(n)
 AI
 
 Championship
-
-7/players roundup
-
-7/2 3.5546546546, 4*2 = 8 >= 7
-7/3 2.12312312, 3*3 = 9 >= 7
