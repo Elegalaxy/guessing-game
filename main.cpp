@@ -7,12 +7,12 @@
 #include "player.h"
 using namespace std;
 
-int main(){
-    srand (time(NULL));
-    int ans = rand()%100+1;
-
-    cout << "Welcome to guess the number." << endl;
+pair <vector<player*>,int >singleplayer(){
     
+}
+
+pair <vector<player*>,int >multiplayer(){
+    int ans = rand()%100+1;
 
     vector<player*> players;
     int num;
@@ -31,19 +31,45 @@ int main(){
 
    cout << endl <<"Guess the number between 1 to 100 and you have total of "<< chance << " chances" << endl;
     gameplay(players, ans , chance);
-    string champ = "";
-    int mx = 0;
-    for(player* i:players){
-        if(i->score > mx){
-            mx = i->score;
-            champ = i->name;
+    return {players,ans};
+}
+
+
+
+int main(){
+    srand (time(NULL));
+
+    cout << "Welcome to Guess The Number." << endl;
+    int choice = 1;
+    pair <vector<player*>,int> players;
+    while(choice != 3){
+        cout << "(1)Singleplayer" << endl;
+        cout << "(2)Multiplayer" << endl;
+        cout << "(3)Quit" << endl;
+        cin >> choice;
+        
+        if(choice == 1)
+            players = singleplayer();
+        else if (choice == 2)
+            players = multiplayer();
+        
+        if (choice == 1 || choice == 2){
+            string champ = "";
+            int mx = 0;
+            for(player* i:players.first){
+                if(i->score > mx){
+                    mx = i->score;
+                    champ = i->name;
+                }
+            }
+
+            if(mx != 0)
+                cout << "The champion is " << champ << " with the score of " << mx << " !" << endl;
+            else
+                cout << "Everyone sucks, answer is: " << players.second << endl;
+
+                
         }
     }
-
-    if(mx != 0)
-        cout << "The champion is " << champ << " with the score of " << mx << " !" << endl;
-    else
-        cout << "Everyone sucks, answer is: " << ans << endl;
-
     return 0;
 }
