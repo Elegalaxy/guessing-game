@@ -8,5 +8,5 @@ ai::ai(string n , int s): player(n, s)
 
 int ai::getScore(int mn, int mx)
 {
-    return 123;
+    return rand()%mx+mn;
 }
