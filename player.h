@@ -8,7 +8,8 @@ class player
 public:
     string name;
     int score;
-    player(string name , int score);
+    bool isPlayer;
+    player(string name , int score, bool isPlayer);
 };
 
 

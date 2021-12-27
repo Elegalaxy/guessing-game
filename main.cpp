@@ -20,10 +20,10 @@ pair <vector<player*>,int >singleplayer(){
     cout << "How many ai are there? ";
     cin >> num;
 
-    ais.push_back(new player(n, 0));
+    ais.push_back(new player(n, 0, true));
 
     for(int i = 0; i < num; i++){
-        ai* temp = new ai("AI "+to_string(i+1), 0);
+        ai* temp = new ai("AI "+to_string(i+1), 0, false);
         ais.push_back(temp);
     }
 
@@ -47,7 +47,7 @@ pair <vector<player*>,int >multiplayer(){
         string n;
         cout << "Name of player " << i+1 << " is: ";
         cin >> n;
-        player* temp = new player(n, 0);
+        player* temp = new player(n, 0, true);
         players.push_back(temp);
     }
 
