@@ -1,2 +1,2 @@
 main:
-	g++ -o main player.h game.h player.cpp game.cpp main.cpp
+	g++ -o main player.h ai.h game.h player.cpp ai.cpp game.cpp main.cpp 

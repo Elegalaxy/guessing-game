@@ -8,8 +8,8 @@ class player
 public:
     string name;
     int score;
-    bool isPlayer;
-    player(string name , int score, bool isPlayer);
+    player(string name , int score);
+    virtual int getScore(int mn, int mx);
 };
 
 

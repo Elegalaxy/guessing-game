@@ -1,12 +1,14 @@
 #include <iostream>
 #include "ai.h"
 
-ai::ai(string n , int s, bool ip): player(n, s, ip)
+ai::ai(string n , int s): player(n, s)
 {
     
 }
 
 int ai::getScore(int mn, int mx)
 {
-    return rand()%mx+mn;
+    int aiscore =rand()%(mx-mn+1)+mn;
+    cout << name << " choose " << aiscore << endl;
+    return aiscore;
 }

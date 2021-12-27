@@ -20,14 +20,14 @@ pair <vector<player*>,int >singleplayer(){
     cout << "How many ai are there? ";
     cin >> num;
 
-    ais.push_back(new player(n, 0, true));
+    ais.push_back(new player(n, 0));
 
     for(int i = 0; i < num; i++){
-        ai* temp = new ai("AI "+to_string(i+1), 0, false);
+        ai* temp = new ai("AI "+to_string(i+1), 0);
         ais.push_back(temp);
     }
 
-    int chance = ceil(7.0/(float)num)*num;
+    int chance = ceil(7.0/(float)(num+1))*(num+1);
 
     cout << endl <<"Guess the number between 1 to 100 and you have total of "<< chance << " chances" << endl;
     gameplay(ais, ans , chance);
@@ -47,7 +47,7 @@ pair <vector<player*>,int >multiplayer(){
         string n;
         cout << "Name of player " << i+1 << " is: ";
         cin >> n;
-        player* temp = new player(n, 0, true);
+        player* temp = new player(n, 0);
         players.push_back(temp);
     }
 
@@ -70,6 +70,7 @@ int main(){
         cout << "(2)Multiplayer" << endl;
         cout << "(3)Quit" << endl;
         cin >> choice;
+        cout << endl;
         
         if(choice == 1)
             players = singleplayer();

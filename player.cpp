@@ -1,10 +1,15 @@
 #include <iostream>
 #include "player.h"
 
-player::player(string n , int s, bool ip)
+player::player(string n , int s)
 {
     name = n;
     score = s;
-    isPlayer = ip;
 }
 
+int player :: getScore(int mn, int mx){
+    int input;
+    cout << name << " enter Number betweeen " << mn << " - " << mx << ": ";
+    cin >> input;
+    return input;
+}
