@@ -14,7 +14,7 @@ pair <vector<player*>,int >singleplayer(){
 
     cout << "Your name: ";
     string n;
-    cin >> n;
+    getline(cin, n);
 
     int num;
     cout << "How many ai are there? ";
@@ -46,7 +46,7 @@ pair <vector<player*>,int >multiplayer(){
     for(int i = 0; i < num; i++){
         string n;
         cout << "Name of player " << i+1 << " is: ";
-        cin >> n;
+        getline(cin, n);
         player* temp = new player(n, 0);
         players.push_back(temp);
     }
