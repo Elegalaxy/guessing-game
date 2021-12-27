@@ -1,3 +1,9 @@
+/*
+Guessing game by ZeKai Chong and Dowson Kerk
+ZeKai Chong: https://github.com/Elegalaxy
+Dowson Kerk: https://github.com/DowsonKerk
+*/
+
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
