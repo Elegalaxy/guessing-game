@@ -6,7 +6,7 @@ class ai: public player
 {
 
 public:
-    ai(string name , int score);
+    ai(string name , int score, bool isPlayer);
     int getScore(int mn, int mx);
 };
 
