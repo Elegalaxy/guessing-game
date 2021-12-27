@@ -1,0 +1,12 @@
+﻿  ai.cpp
+  game.cpp
+  GuessingGame.cpp
+D:\cpp\guessing-game\GuessingGame\GuessingGame.cpp(30,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\cpp\guessing-game\GuessingGame\GuessingGame.cpp(54,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\cpp\guessing-game\GuessingGame\GuessingGame.cpp(63,16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  player.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 239 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  GuessingGame.vcxproj -> D:\cpp\guessing-game\x64\Release\GuessingGame.exe

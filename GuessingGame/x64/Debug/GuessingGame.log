@@ -1,0 +1,9 @@
+﻿  ai.cpp
+  game.cpp
+  GuessingGame.cpp
+D:\cpp\guessing-game\GuessingGame\GuessingGame.cpp(30,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\cpp\guessing-game\GuessingGame\GuessingGame.cpp(54,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\cpp\guessing-game\GuessingGame\GuessingGame.cpp(63,16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  player.cpp
+  Generating Code...
+  GuessingGame.vcxproj -> D:\cpp\guessing-game\x64\Debug\GuessingGame.exe
