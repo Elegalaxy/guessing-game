@@ -2,7 +2,7 @@
 #define AI_H
 #include "player.h"
 
-class ai: player
+class ai: public player
 {
 
 public:

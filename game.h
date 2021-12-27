@@ -5,6 +5,5 @@
 using namespace std;
 
 void gameplay(vector<player*>&players , int random , int chance);
-void gameplay(string n, vector<ai*>&players , int random , int chance);
 
 #endif

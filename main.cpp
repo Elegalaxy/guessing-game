@@ -10,14 +10,17 @@ using namespace std;
 pair <vector<player*>,int >singleplayer(){
     int ans = rand()%100+1;
 
-    vector<ai*> ais;
-    int num;
-    cout << "How many ai are there? ";
-    cin >> num;
+    vector<player*> ais;
 
     cout << "Your name: ";
     string n;
     cin >> n;
+
+    int num;
+    cout << "How many ai are there? ";
+    cin >> num;
+
+    ais.push_back(new player(n, 0));
 
     for(int i = 0; i < num; i++){
         ai* temp = new ai("AI "+to_string(i+1), 0);
@@ -27,7 +30,7 @@ pair <vector<player*>,int >singleplayer(){
     int chance = ceil(7.0/(float)num)*num;
 
     cout << endl <<"Guess the number between 1 to 100 and you have total of "<< chance << " chances" << endl;
-    gameplay(n, ais, ans , chance);
+    gameplay(ais, ans , chance);
     return {ais,ans};
 
 }
